@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="fromEmail" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="fromName" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="host" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="isDefault" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="login" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="name" attributeType="String" maxValueString="50" indexed="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="port" attributeType="Integer 16" defaultValueString="22" syncable="YES"/>
+        <attribute name="provider" attributeType="String" maxValueString="50" defaultValueString="GMail" syncable="YES"/>
+        <attribute name="ssl" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="checked" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="custom1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" maxValueString="20" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" maxValueString="20" syncable="YES"/>
+        <relationship name="list" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="contacts" inverseEntity="List" syncable="YES"/>
+        <relationship name="logs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SendLog" inverseName="contact" inverseEntity="SendLog" syncable="YES"/>
+    </entity>
+    <entity name="List" representedClassName="List" syncable="YES">
+        <attribute name="isHtml" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" maxValueString="100" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Contact" inverseName="list" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="logs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ListSendLog" inverseName="list" inverseEntity="ListSendLog" syncable="YES"/>
+        <relationship name="project" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="lists" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="ListSendLog" representedClassName="ListSendLog" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="list" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="logs" inverseEntity="List" syncable="YES"/>
+        <relationship name="logs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SendLog" inverseName="listSendLog" inverseEntity="SendLog" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="name" attributeType="String" maxValueString="100" syncable="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" syncable="YES"/>
+        <relationship name="lists" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="List" inverseName="project" inverseEntity="List" syncable="YES"/>
+    </entity>
+    <entity name="SendLog" representedClassName="SendLog" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="error" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isError" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="contact" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="logs" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="listSendLog" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ListSendLog" inverseName="logs" inverseEntity="ListSendLog" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="Contact" positionX="160" positionY="192" width="128" height="360"/>
+        <element name="List" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="ListSendLog" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Project" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="SendLog" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>name</key>
+        <string>Name</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>name</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>First Name</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>firstName</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Last Name</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>lastName</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Street</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>street</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>City</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>city</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>State</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>state</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>ZIP Code</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>zip</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Title</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>title</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Nick Name</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>nickname</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Phone</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>phone</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Mobile</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>mobile</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Email</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>email</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Company Name</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>companyName</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Custom #1</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>custom1</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Custom #2</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>custom2</string>
+    </dict>
+
+    <dict>
+        <key>name</key>
+        <string>Custom #3</string>
+        <key>index</key>
+        <integer>0</integer>
+        <key>key</key>
+        <string>custom3</string>
+    </dict>
+
+</array>
+</plist>

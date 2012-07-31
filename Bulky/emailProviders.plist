@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GMail</key>
+	<dict>
+		<key>port</key>
+		<integer>587</integer>
+		<key>server</key>
+		<string>smtp.gmail.com</string>
+	</dict>
+	<key>Yahoo</key>
+	<dict>
+        <key>port</key>
+        <integer>465</integer>
+        <key>server</key>
+       	<string>smtp.att.yahoo.com</string>
+	</dict>
+	<key>Hotmail</key>
+	<dict>
+        <key>port</key>
+        <integer>587</integer>
+        <key>server</key>
+       	<string>smtp.live.com</string>
+	</dict>
+	<key>Custom SMTP</key>
+	<dict>
+        <key>port</key>
+        <string></string>
+        <key>server</key>
+       	<string></string>
+	</dict>
+
+</dict>
+</plist>
